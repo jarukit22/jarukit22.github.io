@@ -1,6 +1,12 @@
 const canvas = document.getElementById("universe");
 const ctx = canvas.getContext("2d");
 
+function getCSSVariable(name) {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+}
+
 let width = (canvas.width = window.innerWidth);
 let height = (canvas.height = window.innerHeight);
 
@@ -20,13 +26,15 @@ for (let i = 0; i < numStars; i++) {
 
 function drawStars() {
   // พื้นหลังสีดำ
-  ctx.fillStyle = "black";
+  const bgColor = getCSSVariable("--bg-color");
+  const starColor = getCSSVariable("--accent-blue");
+  ctx.fillStyle = bgColor;
   ctx.fillRect(0, 0, width, height);
 
   stars.forEach((star) => {
     ctx.beginPath();
     ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-    ctx.fillStyle = "#8be9fd";
+    ctx.fillStyle = starColor;
     ctx.fill();
 
     // เคลื่อนไหว

@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jarukit Bunraksa - Portfolio</title>
-    <link rel="stylesheet" href="background-universe.css" />
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/background-universe.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <canvas id="universe"></canvas>
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h2>&lt;<span class="highlight">P</span>/&gt;</h2>
+        </div>
+        <div class="nav-group">
+          <nav id="nav">
+            <ul>
+              <li><a href="#home" class="menu">หน้าแรก</a></li>
+              <li><a href="#about" class="menu">เกี่ยวกับ</a></li>
+              <li><a href="#" class="menu">ทักษะ</a></li>
+              <li><a href="#" class="menu">ประสบการณ์</a></li>
+              <li><a href="#project" class="menu">โปรเจกต์</a></li>
+              <li><a href="#contact" class="menu">ติดต่อ</a></li>
+            </ul>
+          </nav>
+          <div id="meun-btn" class="menu-toggle" onclick="menuToggle(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home"></section>
+      <section id="about"></section>
+      <section id="project"></section>
+      <section id="contact"></section>
+    </main>
     
-    <script src="background-universe.js"></script>
-</body>
+    <script src="js/background-universe.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
